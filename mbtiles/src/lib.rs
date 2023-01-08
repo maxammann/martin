@@ -72,7 +72,7 @@ impl Mbtiles {
     pub async fn get_metadata(&self) -> MbtResult<Metadata> {
         let mut res = Metadata {
             tilejson: tilejson! {
-                tiles: vec![String::new()],
+                tiles: vec![],
             },
             id: self.filename.to_string(),
             tile_format: DataFormat::Unknown,
